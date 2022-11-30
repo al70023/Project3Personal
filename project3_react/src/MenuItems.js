@@ -149,7 +149,8 @@ function MenuItems() {
 
     // VIEWING ALL MENU ITEMS
     const fetchMenuItems = () => {
-        fetch('http://localhost:3001/MenuItems', {mode: 'cors'})
+        //fetch('http://localhost:3001/MenuItems')
+        fetch('https://node-deployment-bjd4.onrender.com/MenuItems')
         .then(res => res.json())
         .then(json => setMenuItemsData(json))
     }
