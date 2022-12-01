@@ -7,7 +7,8 @@ function RestockReport() {
     const [restockItemsData, setRestockItemsData] = useState([]);
 
     const fetchRestockItems = () => {
-        fetch('http://localhost:3001/RestockReport')
+        //fetch('http://localhost:3001/RestockReport')
+        fetch('https://node-deployment-bjd4.onrender.com/RestockReport')
             .then(res => res.json())
             .then(json => setRestockItemsData(json))
     }

@@ -49,7 +49,8 @@ function Checkout() {
         }
 
         // Add the new menu item into the table
-        fetch('http://localhost:3001/orderSummary/insert', requestOptions)
+        //fetch('http://localhost:3001/orderSummary/insert', requestOptions)
+        fetch('https://node-deployment-bjd4.onrender.com/orderSummary/insert', requestOptions)
             .then(res => res.json())
             .then(window.location.replace('/OrderSummary'));
     }

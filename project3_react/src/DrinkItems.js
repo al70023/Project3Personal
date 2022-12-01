@@ -10,10 +10,11 @@ function DrinkItems() {
 
     const [totalCost, setTotalCost] = useState(parseFloat(sessionStorage.getItem("orderCost")) || 0.00);
 
-    const fetchDrinkItems = () => {
-        fetch('http://localhost:3001/DrinkItems')
-        .then(res => res.json())
-        .then(json => setDrinkItemsData(json))
+    const fetchDrinkItems = () => {  
+        //fetch('http://localhost:3001/DrinkItems')
+        fetch('https://node-deployment-bjd4.onrender.com/DrinkItems')
+            .then(res => res.json())
+            .then(json => setDrinkItemsData(json))
     }
     
     // Call the function on the component mount
